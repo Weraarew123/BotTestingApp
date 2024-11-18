@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat z Modelem</title>
+</head>
+<body>
+    <h1>Porozmawiaj z modelem</h1>
+    <form method="post">
+        {%csrf_token%}
+        <textarea name="user_input" rows="4" cols="50" placeholder="Wpisz swoje pytanie..."></textarea><br>
+        <button type="submit">Wyślij</button>
+    </form>
+        <h2>Odpowiedź:</h2>
+        <p> {{response}}</p>
+</body>
+</html>
